@@ -1,0 +1,17 @@
+# Fichiers temporaires Office
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Ne jamais committer les supports de cours originaux (IP de l'enseignant)
+*TP*.pptx
+*scenario-original*
