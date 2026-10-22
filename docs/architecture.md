@@ -4,26 +4,26 @@ L'architecture annoncée est globalement saine (Zero Trust, SSO, WAF, chiffremen
 
 ```mermaid
 flowchart LR
-    subgraph U["👤 Utilisateurs"]
+    subgraph U["Utilisateurs"]
         U1["Web / mobilité<br/>Postes gérés"]
     end
 
-    subgraph EDGE["🌐 Internet / Edge"]
-        DNS["DNS sécurisé<br/>Protection DDoS<br/>⚠️ TLS 1.1 (obsolète)"]
+    subgraph EDGE["Internet / Edge"]
+        DNS["DNS sécurisé<br/>Protection DDoS<br/>TLS 1.1 (obsolète)"]
         FD["Front Door Cloud<br/>WAF · reverse proxy · LB HA"]
     end
 
-    subgraph CLOUD["☁️ Cloud & Identité"]
+    subgraph CLOUD["Cloud & Identité"]
         ENTRA["Microsoft Entra ID<br/>SSO · MFA · accès conditionnel"]
         CRM["Assurance-Xpert 360 (SaaS)<br/>CRM multi-tenant · RBAC · chiffrement"]
     end
 
-    subgraph INT["🔗 Intégration sécurisée"]
-        API["API Gateway / iPaaS<br/>OAuth 2.0 / mTLS · rate limiting<br/>⚠️ clé API 365j en clair"]
+    subgraph INT["Intégration sécurisée"]
+        API["API Gateway / iPaaS<br/>OAuth 2.0 / mTLS · rate limiting<br/>clé API 365j en clair"]
         MKT["Plateforme marketing<br/>Campagnes · webhooks"]
     end
 
-    subgraph SI["🏢 SI interne"]
+    subgraph SI["SI interne"]
         FW["Pare-feu SI"]
         ERP["ERP<br/>Back-office métier<br/>Réseau privé"]
     end

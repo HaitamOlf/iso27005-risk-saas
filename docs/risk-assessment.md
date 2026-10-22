@@ -132,17 +132,17 @@ Chaque scénario combine : **Bien + Source + Menace + Vulnérabilité exploitée
 
 | # | Risque | P | I | R | Niveau | Justification |
 | --- | -------- | --- | --- | --- | -------- | --------------- |
-| R1 | Compromission compte commercial | 4 | 5 | **20** | 🔴 Critique | Phishing trivial + MFA absent + comptes dormants ; export Excel → fuite large |
-| R10 | Non-conformité RGPD | 4 | 4 | **16** | 🔴 Critique | Sous-traitance + données assurés → manquement probable ; sanction |
-| R2 | Abus rôle Super Admin | 3 | 5 | **15** | 🔴 Critique | MFA admin abaisse l'externe, mais menace interne + export intégral |
-| R4 | Vol de la clé API | 3 | 5 | **15** | 🔴 Critique | Accès serveur requis, mais clé en clair R/W + aucune alerte → C + I |
-| R7 | Perte de données / restauration KO | 3 | 5 | **15** | 🔴 Critique | Ransomware plausible + sauvegardes jamais testées → perte durable |
-| R3 | Accès illégitime persistant | 4 | 3 | **12** | 🟠 Élevé | Dormants + comptes locaux + droits auto → très exploitable ; portée variable |
-| R5 | Défaut de détection | 4 | 3 | **12** | 🟠 Élevé | État actuel : un incident SaaS passe inaperçu ; gonfle l'impact des autres |
-| R6 | Indisponibilité > 8 h | 3 | 4 | **12** | 🟠 Élevé | 99,9 % ≈ 8,7 h/an possible + aucun PRA testé ; 80 % de l'activité |
-| R8 | Accès fournisseur non maîtrisé | 3 | 4 | **12** | 🟠 Élevé | Support accède sans visibilité ; accès potentiel aux données assurés |
-| R9 | Fuite via sous-traitants | 3 | 4 | **12** | 🟠 Élevé | 4 sous-traitants traitant des données perso → fuite / non-conformité |
-| R11 | Interception via TLS 1.1 | 3 | 4 | **12** | 🟠 Élevé | Protocole déprécié + MITM possible ; données perso en transit |
+| R1 | Compromission compte commercial | 4 | 5 | **20** | Critique | Phishing trivial + MFA absent + comptes dormants ; export Excel → fuite large |
+| R10 | Non-conformité RGPD | 4 | 4 | **16** | Critique | Sous-traitance + données assurés → manquement probable ; sanction |
+| R2 | Abus rôle Super Admin | 3 | 5 | **15** | Critique | MFA admin abaisse l'externe, mais menace interne + export intégral |
+| R4 | Vol de la clé API | 3 | 5 | **15** | Critique | Accès serveur requis, mais clé en clair R/W + aucune alerte → C + I |
+| R7 | Perte de données / restauration KO | 3 | 5 | **15** | Critique | Ransomware plausible + sauvegardes jamais testées → perte durable |
+| R3 | Accès illégitime persistant | 4 | 3 | **12** | Élevé | Dormants + comptes locaux + droits auto → très exploitable ; portée variable |
+| R5 | Défaut de détection | 4 | 3 | **12** | Élevé | État actuel : un incident SaaS passe inaperçu ; gonfle l'impact des autres |
+| R6 | Indisponibilité > 8 h | 3 | 4 | **12** | Élevé | 99,9 % ≈ 8,7 h/an possible + aucun PRA testé ; 80 % de l'activité |
+| R8 | Accès fournisseur non maîtrisé | 3 | 4 | **12** | Élevé | Support accède sans visibilité ; accès potentiel aux données assurés |
+| R9 | Fuite via sous-traitants | 3 | 4 | **12** | Élevé | 4 sous-traitants traitant des données perso → fuite / non-conformité |
+| R11 | Interception via TLS 1.1 | 3 | 4 | **12** | Élevé | Protocole déprécié + MITM possible ; données perso en transit |
 
 **Priorisation (classement décroissant).** Au Point de décision 1, l'appréciation est jugée satisfaisante : aucun risque n'est acceptable en l'état (5 critiques, 6 élevés), tous font l'objet d'un traitement.
 
